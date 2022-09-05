@@ -1,0 +1,5 @@
+cuda==9.0.176
+cudnn==7.0.5
+tensorflow-gpu==1.14.0
+
+** Note: We use tensorflow v1 in the code.
