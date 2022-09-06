@@ -33,7 +33,7 @@ def GpuInit():
     K.set_session(session)
 
     return session
-# 参数设置
+
 def parse_args():
     parser = argparse.ArgumentParser(description='train')
 
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     dc.pretrain(x, batch_size= args.batch_size,
                 epochs = args.epochs,
                 save_dir=args.save_dir)
-    # 随机1000个。TSNE+GMM测试后
+    
     dc.evaluate(flag_all=True)
     dc.visulization(args.save_dir + '/embedding_init.png',save_dir = args.save_dir)
 
@@ -88,7 +88,7 @@ if __name__ == "__main__":
                    save_dir = args.save_dir,
                    second = True
                    )
-    #  经过triple loss后的acc
+   
     dc.evaluate(flag_all= True)
     dc.visulization(args.save_dir + '/embedding_refine.png',save_dir = args.save_dir,flag = 1)
 
