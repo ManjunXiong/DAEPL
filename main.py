@@ -40,7 +40,7 @@ def parse_args():
     parser.add_argument('--dataset',default='bearing_30_2',choices=['GSZ5','bearing_30_2'])
     parser.add_argument('--n_clusters',default=5,type=int)
     parser.add_argument('--batch_size',default=256,type=int)
-    parser.add_argument('--epochs',default=10,type=int)
+    parser.add_argument('--epochs',default=2,type=int)
     parser.add_argument('--cae_weights',
                          help = 'This is argument must be given')
     parser.add_argument('--save_dir',default='results2/bearing_30_2')
@@ -84,7 +84,7 @@ if __name__ == "__main__":
 
     dc.refineTrain(x,
                    batch_size = args.batch_size,
-                   epochs = 7,
+                   epochs = 2,
                    save_dir = args.save_dir,
                    second = True
                    )
